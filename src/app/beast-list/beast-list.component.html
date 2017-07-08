@@ -1,4 +1,4 @@
-<div *ngFor="let currentBeast of masterBeastList">
+<div *ngFor="let currentBeast of childBeastList">
   <ul>
     <li>name: {{currentBeast.name}}</li>
     <li>species: {{currentBeast.species}}</li>
@@ -10,9 +10,5 @@
     <li>likes: {{currentBeast.likes}}</li>
     <li>dislikes: {{currentBeast.dislikes}}</li>
   </ul>
-  <hr>
-    <div *ngIf="selectedBeast">
-      <edit-beast [childSelectedBeast]="selectedBeast" (doneButtonClickedSender)="finishedEditing()"></edit-beast>
-    </div>
-  <button (click)="editBeast(currentBeast)">edit</button>
+  <button (click)="editButtonClicked(currentBeast)">edit</button>
 </div>

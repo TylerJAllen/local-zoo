@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Beast } from '../beast.model';
 
 @Component({
@@ -8,10 +8,16 @@ import { Beast } from '../beast.model';
 })
 export class BeastListComponent implements OnInit {
 
-  masterBeastList: Beast [] = [
-    new Beast("Andy", "grizzly bear", 2, "male", "Carnivore", "Cascadia", 3, "long naps", "onions"),
-    new Beast("Sandy", "penguin", 5, "female", "Carnivore", "Snow Zone", 3, "swimming", "vegetables")
-  ];
+  // masterBeastList: Beast [] = [
+  //   new Beast("Andy", "grizzly bear", 2, "male", "Carnivore", "Cascadia", 3, "long naps", "onions"),
+  //   new Beast("Sandy", "penguin", 5, "female", "Carnivore", "Snow Zone", 3, "swimming", "vegetables")
+  // ];
+  @Input() childBeastList: Beast[];
+  @Output() clickSender = new EventEmitter();
+
+  editButtonClicked(beastToEdit: Beast) {
+    this.clickSender.emit(beastToEdit);
+  }
 
   constructor() {}
   ngOnInit() {}

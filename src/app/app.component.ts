@@ -9,10 +9,10 @@ import { Beast } from './beast.model';
 export class AppComponent {
   selectedBeast = null;
 
-  // masterBeastList: Beast [] = [
-  //   new Beast("Andy", "grizzly bear", 2, "male", "Carnivore", "Cascadia", 3, "long naps", "onions"),
-  //   new Beast("Sandy", "penguin", 5, "female", "Carnivore", "Snow Zone", 3, "swimming", "vegetables")
-  // ];
+  masterBeastList: Beast [] = [
+    new Beast("Andy", "grizzly bear", 2, "male", "Carnivore", "Cascadia", 3, "long naps", "onions"),
+    new Beast("Sandy", "penguin", 5, "female", "Carnivore", "Snow Zone", 3, "swimming", "vegetables")
+  ];
 
   addBeast(newBeastFromChild: Beast) {
     this.masterBeastList.push(newBeastFromChild);

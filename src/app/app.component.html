@@ -1,26 +1,10 @@
 <h1>Add new Beast</h1>
 <beast-form (newBeastSender)="addBeast($event)"></beast-form>
 <h1>All Beasts:</h1>
-<beast-list></beast-list>
-<!-- <div *ngFor="let currentBeast of masterBeastList">
-  <ul>
-    <li>name: {{currentBeast.name}}</li>
-    <li>species: {{currentBeast.species}}</li>
-    <li>age: {{currentBeast.age}}</li>
-    <li>sex: {{currentBeast.sex}}</li>
-    <li>diet: {{currentBeast.diet}}</li>
-    <li>location: {{currentBeast.location}}</li>
-    <li>caretakers: {{currentBeast.caretakers}}</li>
-    <li>likes: {{currentBeast.likes}}</li>
-    <li>dislikes: {{currentBeast.dislikes}}</li>
-  </ul>
-  <hr>
-    <div *ngIf="selectedBeast">
-      <edit-beast [childSelectedBeast]="selectedBeast" (doneButtonClickedSender)="finishedEditing()"></edit-beast>
-    </div>
-  <button (click)="editBeast(currentBeast)">edit</button>
-</div> -->
 
+<beast-list [childBeastList]="masterBeastList" (clickSender)="editBeast($event)"></beast-list>
 
-
-      <!-- <beast-list [childBeastList]="masterBeastList" (clickSender)="editBeast($event)"></beast-list> -->
+<hr>
+<div *ngIf="selectedBeast">
+  <edit-beast [childSelectedBeast]="selectedBeast" (doneButtonClickedSender)="finishedEditing()"></edit-beast>
+</div>
