@@ -1,4 +1,10 @@
-<div *ngFor="let currentBeast of childBeastList">
+<select (change)="onChange($event.target.value)">
+  <option value="allBeasts">All Beasts</option>
+  <option value="littleBeasts">Little Beasts</option>
+  <option value="bigBeasts" selected="selected">Big Beasts</option>
+</select>
+
+<div *ngFor="let currentBeast of childBeastList | ageFilter:filterByAge">
   <ul>
     <li>name: {{currentBeast.name}}</li>
     <li>species: {{currentBeast.species}}</li>
