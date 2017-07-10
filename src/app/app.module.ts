@@ -8,6 +8,7 @@ import { EditBeastComponent } from './edit-beast/edit-beast.component';
 import { BeastListComponent } from './beast-list/beast-list.component';
 import { AgeFilterPipe } from './age-filter.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,

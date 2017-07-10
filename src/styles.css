@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'kid';
+  src:  url('./fonts/kid.otf');
+}
+
+BODY {
+  background-color: #c5ec77;
+  font-family: sans-serif;
+}
+
+#hero {
+  background-image: url("images/zooAnimals.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 70vh;
+  width: 100%;
+}
+
+#heroText {
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+  color: #159400;
+  font-family: fantasy;
+}
+
+#heroText h1 {
+  font-family: 'kid', sans-serif;
+  font-size: 5em;
+  margin: .1em;
+}
+
+#heroText h3 {
+  font-size: 1.5em;
+  margin: .1em;
+}
+
+.red {
+  color: #df1f1d;
+}
+.blue {
+  color: #2ea7e4;
+}
+.orange {
+  color: #f0562a;
+}
+.brown {
+  color: #a77d52;
+}
+.gray {
+  color: #818284;
+}
+.pink {
+  color: #ea048d;
+}
+.purple {
+  color: #93268f;
+}
+.green {
+  color: #2fb172;
+}
+.yellow {
+  color: #ffe01e;
+}
+.black {
+  color: #000000;
+}
