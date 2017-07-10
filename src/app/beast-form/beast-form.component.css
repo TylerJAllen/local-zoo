@@ -1,0 +1,40 @@
+#form-container {
+  margin-bottom: 3em;
+}
+#beast-form {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.form-grouping {
+  width: 30%;
+}
+#beast-form label {
+  display: block;
+  font-weight: bold;
+}
+#beast-form input {
+  border-radius: 50px;
+  height: 3em;
+  padding: 2px 10px;
+}
+#beast-form input, #beast-form select {
+  width: 90%;
+  margin: 0 auto 10px;
+  border: 2px solid #159400;
+  background-color: #fff;
+}
+#add-beast-button {
+  width: 180px;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #159400;
+  -webkit-appearance: none;
+}

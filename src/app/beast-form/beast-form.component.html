@@ -1,54 +1,59 @@
 
-<div class="container">
-  <h1>beast entry</h1>
-  <form>
-    <div>
-      <label for="name">Name</label>
-      <input #newName type="text" required>
+<div id="form-container">
+  <form id="beast-form">
+    <div class="form-grouping">
+      <div>
+        <label for="name">Name</label>
+        <input #newName type="text" required>
+      </div>
+      <div>
+        <label for="species">Species</label>
+        <input #newSpecies type="text" required>
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input #newAge type="number" required>
+      </div>
     </div>
-    <div>
-      <label for="species">Species</label>
-      <input #newSpecies type="text" required>
+    <div class="form-grouping">
+      <div>
+        <label for="sex">Sex</label>
+        <select #newSex>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div>
+        <label for="diet">Diet</label>
+        <select #newDiet>
+          <option value="herbivore">herbivore</option>
+          <option value="carnivore">carnivore</option>
+        </select>
+      </div>
+      <div>
+        <label for="location">Location</label>
+        <select #newLocation>
+          <option value="African Trek">African Trek</option>
+          <option value="Cascadia">Cascadia</option>
+          <option value="Snow Zone">Snow Zone</option>
+          <option value="Water World">Water World</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <label for="age">Age</label>
-      <input #newAge type="number" required>
+    <div class="form-grouping">
+      <div>
+        <label for="caretakers">Caretakers</label>
+        <input #newCaretakers type="number" required>
+      </div>
+      <div>
+        <label for="likes">Likes</label>
+        <input #newLikes type="text" required>
+      </div>
+      <div>
+        <label for="dislikes">Dislikes</label>
+        <input #newDislikes type="text" required>
+      </div>
     </div>
-    <div>
-      <label for="sex">Sex</label>
-      <select #newSex>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select>
-    </div>
-    <div>
-      <label for="diet">Diet</label>
-      <select #newDiet>
-        <option value="herbivore">herbivore</option>
-        <option value="carnivore">carnivore</option>
-      </select>
-    </div>
-    <div>
-      <label for="location">Location</label>
-      <select #newLocation>
-        <option value="African Trek">African Trek</option>
-        <option value="Cascadia">Cascadia</option>
-        <option value="Snow Zone">Snow Zone</option>
-        <option value="Water World">Water World</option>
-      </select>
-    </div>
-    <div>
-      <label for="caretakers">Caretakers</label>
-      <input #newCaretakers type="number" required>
-    </div>
-    <div>
-      <label for="likes">Likes</label>
-      <input #newLikes type="text" required>
-    </div>
-    <div>
-      <label for="dislikes">Dislikes</label>
-      <input #newDislikes type="text" required>
-    </div>
-    <button (click)="submitForm(newName.value, newSpecies.value, newAge.value, newSex.value, newDiet.value, newLocation.value, newCaretakers.value, newLikes.value, newDislikes.value); newName.value=''; newSpecies.value=''; newAge.value=''; newSex.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value=''">Add Beast!</button>
+    <button id="add-beast-button" (click)="submitForm(newName.value, newSpecies.value, newAge.value, newSex.value, newDiet.value, newLocation.value, newCaretakers.value, newLikes.value, newDislikes.value); newName.value=''; newSpecies.value=''; newAge.value=''; newSex.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value=''">Add Beast!</button>
   </form>
 </div>

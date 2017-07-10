@@ -1,0 +1,16 @@
+#list-section {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#list-section div {
+  width: 50%;
+  border: 5px solid #159400;
+  border-radius: 50px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #ffffff;
+}
+#list-section li {
+  list-style: none;
+}

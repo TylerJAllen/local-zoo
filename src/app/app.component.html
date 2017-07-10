@@ -1,10 +1,12 @@
-<h1>Add new Beast</h1>
-<beast-form (newBeastSender)="addBeast($event)"></beast-form>
-<h1>All Beasts:</h1>
+<div>
+  <h1 class="section-title">Add new Beast</h1>
+  <beast-form (newBeastSender)="addBeast($event)"></beast-form>
+  <h1 class="section-title">All Beasts:</h1>
 
-<beast-list [childBeastList]="masterBeastList" (clickSender)="editBeast($event)"></beast-list>
+  <beast-list [childBeastList]="masterBeastList" (clickSender)="editBeast($event)"></beast-list>
 
-<hr>
-<div *ngIf="selectedBeast">
-  <edit-beast [childSelectedBeast]="selectedBeast" (doneButtonClickedSender)="finishedEditing()"></edit-beast>
+  <hr>
+  <div *ngIf="selectedBeast">
+    <edit-beast [childSelectedBeast]="selectedBeast" (doneButtonClickedSender)="finishedEditing()"></edit-beast>
+  </div>
 </div>

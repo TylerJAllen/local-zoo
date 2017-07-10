@@ -1,20 +1,22 @@
-<select (change)="onChange($event.target.value)">
-  <option value="allBeasts">All Beasts</option>
-  <option value="littleBeasts">Little Beasts</option>
-  <option value="bigBeasts" selected="selected">Big Beasts</option>
-</select>
+<div id="list-section">
+  <select (change)="onChange($event.target.value)">
+    <option value="allBeasts" selected="selected">All Beasts</option>
+    <option value="littleBeasts">Little Beasts</option>
+    <option value="bigBeasts">Big Beasts</option>
+  </select>
 
-<div *ngFor="let currentBeast of childBeastList | ageFilter:filterByAge">
-  <ul>
-    <li>name: {{currentBeast.name}}</li>
-    <li>species: {{currentBeast.species}}</li>
-    <li>age: {{currentBeast.age}}</li>
-    <li>sex: {{currentBeast.sex}}</li>
-    <li>diet: {{currentBeast.diet}}</li>
-    <li>location: {{currentBeast.location}}</li>
-    <li>caretakers: {{currentBeast.caretakers}}</li>
-    <li>likes: {{currentBeast.likes}}</li>
-    <li>dislikes: {{currentBeast.dislikes}}</li>
-  </ul>
-  <button (click)="editButtonClicked(currentBeast)">edit</button>
+  <div *ngFor="let currentBeast of childBeastList | ageFilter:filterByAge">
+    <ul>
+      <li><h1>{{currentBeast.name}}</h1></li>
+      <li>species: {{currentBeast.species}}</li>
+      <li>age: {{currentBeast.age}}</li>
+      <li>sex: {{currentBeast.sex}}</li>
+      <li>diet: {{currentBeast.diet}}</li>
+      <li>location: {{currentBeast.location}}</li>
+      <li>caretakers: {{currentBeast.caretakers}}</li>
+      <li>likes: {{currentBeast.likes}}</li>
+      <li>dislikes: {{currentBeast.dislikes}}</li>
+    </ul>
+    <button (click)="editButtonClicked(currentBeast)">edit</button>
+  </div>
 </div>
